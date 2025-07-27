@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: rubik, sans-serif;
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
+}
+body {
+  display: grid;
+  grid-column: 1 / -1;
+  justify-content: center;
+  align-items: center;
+  background: #f5f9ff;
+}
+main {
+  background: #ffffff;
+  padding: 1rem;
+}
+
+#board-header > h1 {
+  color: #11175e;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0 0 2.5rem 0;
+}
+
+.task-form {
+  display: grid;
+  grid-column: 1 / -1;
+
+  & button {
+    padding: 1rem;
+    color: #ffffff;
+    background-color: #2d70fd;
+    border-radius: 0.5rem;
+    border: 1px solid #eeeeee;
+    margin-bottom: 0.5rem;
+  }
+}
+.task-form-input {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid #eeeeee;
+  border-radius: 0.5rem;
+}
+
+.task {
+  border: 1px solid #eeeeee;
+  border-radius: 0.5rem;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin: 1rem 0 1rem 0;
+  & h3 {
+    font-weight: 500;
+    color: #001747;
+  }
+  & button {
+    display: flex;
+    font-size: 1.1rem;
+    font-weight: 400;
+    padding: 0.6rem;
+    color: #ffffff;
+    background-color: #2d70fd;
+    border-radius: 0.5rem;
+    border: 1px solid #2d70fd;
+    margin: 0.7rem 0;
+    cursor: pointer;
+    justify-content: center;
+    align-self: center;
+    width: 8rem;
+  }
+}
+.task-categories {
+  border-radius: 0.5rem;
+  border: 1px solid #b1bacb;
+  font-size: 0.7rem;
+  padding: 0.5rem;
+  color: #b1bacb;
+  width: fit-content;
+}
+.task-data {
+  font-size: 0.8rem;
+  color: #b1bacb;
+}
+
+footer {
+  border-top: 1px solid #eeeeee;
+  padding-top: 1rem;
+  & h4 {
+    color: #b1bacb;
+    display: flex;
+    justify-self: end;
+  }
+}
+@media (min-width: 426px) and (max-width: 1500px) {
+  * {
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: rubik, sans-serif;
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+  }
+  body {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    background: #f5f9ff;
+    padding: 1rem;
+  }
+  main {
+    background: #ffffff;
+    padding: 1rem;
+  }
+
+  #board-header > h1 {
+    font-size: 2.5rem;
+  }
+
+  .task-form {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    & button {
+      width: 6rem;
+      height: 3.3rem;
+    }
+  }
+  .task-form-input {
+    width: 100%;
+  }
+  footer {
+    margin-top: 3rem;
+  }
+}

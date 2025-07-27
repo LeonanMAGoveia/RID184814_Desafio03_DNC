@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="sript.js"></script>
+  </head>
+  <body>
+    <main>
+      <header id="board-header">
+        <h1>Board de tarefas</h1>
+      </header>
+      <div class="task-form">
+        <form id="create-todo-form" action="#" method="post"></form>
+          <input class="task-form-input" type="text" name="task-name" placeholder="Nome da tarefa" />
+          <input class="task-form-input" type="text" name="task-category" placeholder="Etiqueta" />
+        </form>
+        <button id="add-task-button">+</button>
+      </div>
+      <div class="task-board">
+        <article class="task">
+          <h3>Implementar tela de listagem<br>de tarefas</h3>
+          <p class="task-categories">frontend</p>
+          <p class="task-data">Criado em: 21/08/2024</p>
+          <button>Concluir</button>
+        </article>
+        <article class="task">
+          <h3>Criar endpoint para cadastro de tarefas</h3>
+          <p class="task-categories">backend</p>
+          <p class="task-data">Criado em: 21/08/2024</p>
+          <button>Concluir</button>
+        </article>
+        <article class="task">
+          <h3>Implementar protótipo da listagem de tarefas</h3>
+          <p class="task-categories">UX</p>
+          <p class="task-data">Criado em: 21/08/2024</p>
+          <button>Concluir</button>
+        </article>
+      </div>
+      <footer id="board-footer">
+        <h4>tarefa concluída</h4>
+      </footer>
+    </main>
+  </body>
+</html>
