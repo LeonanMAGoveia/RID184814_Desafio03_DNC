@@ -1,52 +1,60 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BRA">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
       rel="stylesheet"
     />
-    <script src="sript.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Board de Tarefas</title>
   </head>
+
   <body>
-    <main>
-      <header id="board-header">
-        <h1>Board de tarefas</h1>
-      </header>
-      <div class="task-form">
-        <form id="create-todo-form" action="#" method="post"></form>
-          <input class="task-form-input" type="text" name="task-name" placeholder="Nome da tarefa" />
-          <input class="task-form-input" type="text" name="task-category" placeholder="Etiqueta" />
-        </form>
-        <button id="add-task-button">+</button>
+    <div class="container">
+      <h1>Board de Tarefas</h1>
+
+      <section class="input-area">
+        <input
+          id="inputTarefa"
+          type="text"
+          placeholder="Nome da Tarefa"
+          aria-label="Nome da Tarefa"
+        />
+        <input
+          id="inputEtiqueta"
+          type="text"
+          placeholder="Etiqueta"
+          aria-label="Etiqueta da Tarefa"
+        />
+        <button
+          id="botao"
+          onclick="adicionarTarefa()"
+          type="button"
+          aria-label="Adicionar Tarefa"
+        >
+          +
+        </button>
+      </section>
+
+      <div class="tasks-container">
+        <ul></ul>
       </div>
-      <div class="task-board">
-        <article class="task">
-          <h3>Implementar tela de listagem<br>de tarefas</h3>
-          <p class="task-categories">frontend</p>
-          <p class="task-data">Criado em: 21/08/2024</p>
-          <button>Concluir</button>
-        </article>
-        <article class="task">
-          <h3>Criar endpoint para cadastro de tarefas</h3>
-          <p class="task-categories">backend</p>
-          <p class="task-data">Criado em: 21/08/2024</p>
-          <button>Concluir</button>
-        </article>
-        <article class="task">
-          <h3>Implementar protótipo da listagem de tarefas</h3>
-          <p class="task-categories">UX</p>
-          <p class="task-data">Criado em: 21/08/2024</p>
-          <button>Concluir</button>
-        </article>
-      </div>
-      <footer id="board-footer">
-        <h4>tarefa concluída</h4>
-      </footer>
-    </main>
+
+      <section class="footer-line">
+        <h3><span id="contador">0</span> Tarefas concluídas</h3>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
