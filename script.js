@@ -1,6 +1,6 @@
 let contador = 0;
 
-function adicionarTarefa() {
+const adicionarTarefa = () => {
   let tarefa = document.getElementById("inputTarefa").value.trim();
   let etiqueta = document.getElementById("inputEtiqueta").value.trim();
 
@@ -29,9 +29,9 @@ function adicionarTarefa() {
 
   // Criar a tarefa
   criarLista(tarefa, etiqueta);
-}
+};
 
-function criarLista(tarefa, etiqueta) {
+const criarLista = (tarefa, etiqueta) => {
   let data = new Date();
   let dataBr = data.toLocaleString("pt-BR", { dateStyle: "short" });
 
@@ -45,7 +45,13 @@ function criarLista(tarefa, etiqueta) {
           <div class="date"></div>
         </div>
       </div>
-      <button class="botao-concluir" onclick="botaoConcluir(this)" type="button" aria-label="Concluir tarefa">Concluir</button>
+      <button 
+      class="botao-concluir" 
+      onclick="botaoConcluir(this)" 
+      type="button" 
+      aria-label="Concluir tarefa">
+      Concluir
+      </button>
     </section>
   `;
   let taskNome = li.querySelector(".task-nome");
@@ -58,9 +64,9 @@ function criarLista(tarefa, etiqueta) {
   date.textContent = `Criado em: ${dataBr}`;
 
   document.querySelector("ul").appendChild(li);
-}
+};
 
-function botaoConcluir(button) {
+const botaoConcluir = (button) => {
   taskCard = button.closest(".tasks-cards");
   taskNome = taskCard.querySelector(".task-nome");
   taskNome.style.textDecoration = "line-through";
@@ -76,4 +82,4 @@ function botaoConcluir(button) {
 
   contador++;
   document.getElementById("contador").textContent = contador;
-}
+};
